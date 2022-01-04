@@ -87,6 +87,9 @@ nnoremap <leader>ev :split $MYVIMRC<cr><C-w>_
 nnoremap <leader>sv :source $MYVIMRC<cr>
 " map a key to follow links (cannot type c-] on a Swedish keyboard)
 nnoremap <leader>mn <C-]>
+
+" Open previous buffer
+nnoremap <leader>ff :execute "rightbelow split " . bufname("#")<cr>
 " }}}
 
 " Abbreviations {{{
