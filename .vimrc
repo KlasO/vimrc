@@ -8,6 +8,17 @@ filetype plugin indent on " For plugins to load correctly
 set modelines=0 " Security
 set number " Show line numbers
 
+if !exists("g:os")
+  if has("win64") || has("win32") || has("win16")
+    let g:os = "Windows"
+  else
+    let g:os = substitute(system('uname'), '\n', '', '')
+  endif
+endif
+if g:os ==? "darwin"
+  set guifont=Menlo:h24
+endif
+
 set ruler " Show file stats
 
 set visualbell " Blink cursor on error instead of beeping (grr)
