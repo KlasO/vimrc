@@ -64,8 +64,8 @@ set showmatch
 set listchars=tab:▸\ ,eol:¬
 
 " Colorscheme {{{
-"colorscheme murphy   
-"colorscheme torte  
+"colorscheme murphy
+"colorscheme torte
 colorscheme industry
 "colorscheme darkblue
 " }}}
@@ -73,7 +73,7 @@ colorscheme industry
 " My key mappings {{{
 " Define <leader> and <localleader>
 let mapleader = ',' " Leader and local leader key set to ','
-let maplocalleader = ','   
+let maplocalleader = ','
 
 nnoremap j gj " Move up/down editor lines
 nnoremap k gk " Move up/down editor lines
@@ -93,7 +93,7 @@ nnoremap <leader>ff :execute "rightbelow split " . bufname("#")<cr>
 " }}}
 
 " Abbreviations {{{
-iabbrev @@ klas.olsson@memoratus.se 
+iabbrev @@ klas.olsson@memoratus.se
 iabbrev ssig -- <cr>Klas Olsson<cr>klas.olsson@memoratus.se
 " }}}
 
@@ -114,6 +114,9 @@ onoremap alc :<c-u>normal! F}va{<cr>
 onoremap anc :<c-u>normal! f}va{<cr>
 
 nnoremap <leader>mn <C-]>
+" Highlight trailing whitespace; not done yet
+nnoremap <leader>w :match Error /\v\s{1,}$/<CR>
+nnoremap <leader>W :match<CR>
 "onoremap in@ :<c-u>execute "normal! /\S*@\w*\.\w*\r:nohlsearch\rviW"<cr>
 
 " }}}
@@ -138,8 +141,8 @@ augroup filetype_markdown
   autocmd FileType markdown onoremap ih :<c-u>execute "normal! ?^\[=-\]\\+$\r:nohlsearch\rkvg_"<cr>
   autocmd FileType markdown onoremap ah :<c-u>execute "normal! ?^\[=-\]\\+$\r:nohlsearch\rg_vk0"<cr>
   autocmd FileType markdown :set statusline=%F
-  autocmd FileType markdown :set statusline+=%=        
-  autocmd FileType markdown :set statusline+=%l   
+  autocmd FileType markdown :set statusline+=%=
+  autocmd FileType markdown :set statusline+=%l
   autocmd FileType markdown :set statusline+=/
   autocmd FileType markdown :set statusline+=%L
 augroup END
