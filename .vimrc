@@ -113,7 +113,6 @@ onoremap inc :<c-u>normal! f{vi{<cr>
 onoremap alc :<c-u>normal! F}va{<cr>
 onoremap anc :<c-u>normal! f}va{<cr>
 
-nnoremap <leader>mn <C-]>
 " Highlight trailing whitespace; not done yet
 nnoremap <leader>w :match Error /\v\s{1,}$/<CR>
 nnoremap <leader>W :match<CR>
