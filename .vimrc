@@ -82,9 +82,11 @@ nnoremap k gk " Move up/down editor lines
 inoremap <F1> <ESC>:set invfullscreen<CR>a
 nnoremap <F1> :set invfullscreen<CR>
 vnoremap <F1> :set invfullscreen<CR>
+
 " Edit $MYVIMRC
 nnoremap <leader>ev :split $MYVIMRC<cr><C-w>_
 nnoremap <leader>sv :source $MYVIMRC<cr>
+
 " map a key to follow links (cannot type c-] on a Swedish keyboard)
 nnoremap <leader>mn <C-]>
 
