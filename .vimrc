@@ -1,5 +1,5 @@
 " Inspiration (I should probably say 'copying without understanding the
-" consequences') from here:  httddps://gist.github.com/simonista/8703722
+" consequences') from here:  https://gist.github.com/simonista/8703722
 " Basic settings {{{
 set nocompatible " Don't try to be vi compatible
 filetype off " Helps force plugins to load correctly when it is turned back on below
