@@ -76,8 +76,8 @@ colorscheme industry
 let mapleader = ',' " Leader and local leader key set to ','
 let maplocalleader = ','
 
-nnoremap j gj " Move up/down editor lines
-nnoremap k gk " Move up/down editor lines
+"nnoremap j gj " Move up/down editor lines
+"nnoremap k gk " Move up/down editor lines
 
 " Remap help key.
 inoremap <F1> <ESC>:set invfullscreen<CR>a
