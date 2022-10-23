@@ -1,5 +1,5 @@
 " Inspiration (I should probably say 'copying without understanding the
-" consequences') from here:  https://gist.github.com/simonista/8703722
+
 " Basic settings {{{
 set nocompatible " Don't try to be vi compatible
 filetype off " Helps force plugins to load correctly when it is turned back on below
@@ -10,15 +10,22 @@ set modelines=0 " Security
 set number " Show line numbers
 
 if !exists("g:os")
-  if has("win64") || has("win32") || has("win16")
-    let g:os = "Windows"
-  else
-    let g:os = substitute(system('uname'), '\n', '', '')
-  endif
+    if has("win64") || has("win32") || has("win16")
+        let g:os = "Windows"
+    else
+        let g:os = substitute(system('uname'), '\n', '', '')
+    endif
 endif
 if g:os ==? "darwin"
-  set guifont=Menlo:h24
+    set guifont=Menlo:h24
 endif
+
+" Set up persistent undo across all files.
+set undofile
+if !isdirectory(expand("$HOME/.vim/undodir"))
+    call mkdir(expand("$HOME/.vim/undodir"), "p")
+endif
+set undodir=$HOME/.vim/undodir
 
 set ruler " Show file stats
 
@@ -65,10 +72,11 @@ set showmatch
 set listchars=tab:▸\ ,eol:¬
 
 " Colorscheme {{{
-"colorscheme murphy
-"colorscheme torte
-colorscheme industry
-"colorscheme darkblue
+" colorscheme murphy
+" colorscheme torte
+colorscheme desert
+" colorscheme industry
+" colorscheme darkblue
 " }}}
 
 " My key mappings {{{
@@ -126,27 +134,27 @@ nnoremap <leader>W :match<CR>
 " Vimscript file settings ---------------------- {{{
 " Filetype Vim settings {{{
 augroup filetype_vim
-  autocmd!
-  autocmd FileType vim setlocal foldmethod=marker
+    autocmd!
+    autocmd FileType vim setlocal foldmethod=marker
 augroup END
 " }}}
 " Auto load COBOL template {{{
 augroup filetype_cobol
-  autocmd!
-  autocmd BufNewFile  *.cob      0r ~/lang/cobol/header.cob
-  autocmd BufNewFile  *.cbl      0r ~/lang/cobol/header.cob
+    autocmd!
+    autocmd BufNewFile  *.cob      0r ~/lang/cobol/header.cob
+    autocmd BufNewFile  *.cbl      0r ~/lang/cobol/header.cob
 augroup END
 " }}}
 " Markdown settings {{{
 augroup filetype_markdown
-  autocmd!
-  autocmd FileType markdown onoremap ih :<c-u>execute "normal! ?^\[=-\]\\+$\r:nohlsearch\rkvg_"<cr>
-  autocmd FileType markdown onoremap ah :<c-u>execute "normal! ?^\[=-\]\\+$\r:nohlsearch\rg_vk0"<cr>
-  autocmd FileType markdown :set statusline=%F
-  autocmd FileType markdown :set statusline+=%=
-  autocmd FileType markdown :set statusline+=%l
-  autocmd FileType markdown :set statusline+=/
-  autocmd FileType markdown :set statusline+=%L
+    autocmd!
+    autocmd FileType markdown onoremap ih :<c-u>execute "normal! ?^\[=-\]\\+$\r:nohlsearch\rkvg_"<cr>
+    autocmd FileType markdown onoremap ah :<c-u>execute "normal! ?^\[=-\]\\+$\r:nohlsearch\rg_vk0"<cr>
+    autocmd FileType markdown :set statusline=%F
+    autocmd FileType markdown :set statusline+=%=
+    autocmd FileType markdown :set statusline+=%l
+    autocmd FileType markdown :set statusline+=/
+    autocmd FileType markdown :set statusline+=%L
 augroup END
 " }}}
 " }}}
