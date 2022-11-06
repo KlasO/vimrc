@@ -73,8 +73,8 @@ set listchars=tab:▸\ ,eol:¬
 
 " Colorscheme {{{
 " colorscheme murphy
-" colorscheme torte
-colorscheme desert
+colorscheme torte
+" colorscheme desert
 " colorscheme industry
 " colorscheme darkblue
 " }}}
