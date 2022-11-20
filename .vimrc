@@ -18,6 +18,8 @@ if !exists("g:os")
 endif
 if g:os ==? "darwin"
     set guifont=Menlo:h24
+    " Temp fix for <CMD-.> not currently working as <Esc> in iVim.
+    inoremap <D-.> <Esc>
 endif
 
 " Set up persistent undo across all files.
