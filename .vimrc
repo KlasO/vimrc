@@ -74,8 +74,8 @@ set showmatch
 set listchars=tab:▸\ ,eol:¬
 
 " Colorscheme {{{
-" colorscheme murphy
-colorscheme torte
+colorscheme murphy
+" colorscheme torte
 " colorscheme desert
 " colorscheme industry
 " colorscheme darkblue
