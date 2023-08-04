@@ -101,8 +101,8 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 " map a key to follow links (cannot type c-] on a Swedish keyboard)
 nnoremap <leader>mn <C-]>
 
-" Open previous buffer
-nnoremap <leader>ff :execute "rightbelow split " . bufname("#")<cr>
+" Open previous buffer - commented; not sure that I use this
+"nnoremap <leader>ff :execute "rightbelow split " . bufname("#")<cr>
 " }}}
 
 " Abbreviations {{{
@@ -118,13 +118,6 @@ vnoremap <leader>" <esc>`>a"<esc>`<i"<esc>lv`>l
 nnoremap H 0
 nnoremap L $
 inoremap jk <esc>l
-onoremap in( :<c-u>normal! f(vi(<cr>
-onoremap ip( :<c-u>normal! F(vi(<cr>
-
-onoremap ilc :<c-u>normal! F}vi{<cr>
-onoremap inc :<c-u>normal! f{vi{<cr>
-onoremap alc :<c-u>normal! F}va{<cr>
-onoremap anc :<c-u>normal! f}va{<cr>
 
 " Highlight trailing whitespace; not done yet
 nnoremap <leader>w :match Error /\v\s{1,}$/<CR>
