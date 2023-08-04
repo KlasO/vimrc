@@ -1,5 +1,7 @@
-" Inspiration (I should probably say 'copying without understanding the
-
+" My .vimrc, with inspiration from some file I found while googling. Will not
+" pretend that I understand everything, but that should'nt stop me.
+" Klas Olsson
+" https://linktr.ee/klaso
 " Basic settings {{{
 set nocompatible " Don't try to be vi compatible
 filetype off " Helps force plugins to load correctly when it is turned back on below
