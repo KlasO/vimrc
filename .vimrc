@@ -1,5 +1,6 @@
 " My .vimrc, with inspiration from some file I found while googling. Will not
 " pretend that I understand everything, but that should'nt stop me.
+" Aug 18 2023, version 2 begins
 " Klas Olsson
 " https://linktr.ee/klaso
 " Basic settings {{{
